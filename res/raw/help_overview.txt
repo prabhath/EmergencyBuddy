@@ -1,0 +1,111 @@
+Emergency Buddy – Android Application
+Software Requirements Specification
+
+
+Version 1.1
+
+
+1.	Introduction
+1.1	Purpose
+This SRS fully describes the external behavior of the Emergency Buddy Android Application. It also describes nonfunctional requirements, design constraints, and other factors necessary to provide a complete and comprehensive description of the requirements for the software.
+1.2	Scope
+This document applies to Emergency Buddy Android application. It is a tool which can be used in emergencies to inform emergencies, find contacts and places and to get information about natural disasters. It will run one smart phones which uses the Android platform. 
+1.3	Definitions, Acronyms, and Abbreviations
+RUP – Rational Unified Process
+PDF – Portable Document Format
+IDE – Integrated Development Environment
+API – Application Programmer Interface
+GPS – Global Positioning System
+1.4	References
+None
+1.5	Overview
+The rest of this document will contain two chapters which are overall description, specific requirements and supporting information.  The first provides a full description of the project and next lists all the functions performed by the system. The final chapter concerns details of each of the system functions and actions in full for the software developers’ assistance.
+
+2.	Overall Description
+2.1	Product Perspective
+This application is a mobile application which will be developed on Android platform. This application is a tool which can be used on emergency situation. Since an emergency can occur in any time users can keep this application in their phones to use this in that kind of unexpected situations. 
+This will use GPS (if available on the device) and cell tower locations to get user locations. This will use external web services like Google maps, weather services to get locations, maps and other information.
+Application will have a user centered UI which can be easily used in emergency situations and application will operate in a way such that battery usage is optimized.
+2.2	Product functions
+2.2.1	Informing emergencies and asking help
+When there is an emergency users will be want to tell their closers ones that they are in an emergency and need help. When this process is done manually users have to call or SMS each and every person. Sometimes users might not be able to say their exact location or they will not have enough time to contact everyone.
+With this application users can just open the application click emergency button. Then a SMS and Email which says that user is in a trouble and needs help will be delivered to five (or less) predefined contacts with their exact locations. Then others will be able to come and help to the user.
+2.2.2	Automatic Emergency informing
+User’s location may vary in emergency situation. Also if a user does not get help again asking help have to be done again. This application will solve these problems in this way. Once user send an emergency massage application will go to emergency mode. Since then application will send automatic emergency informing massage in every 15 minutes until the user manually mark emergency is over using the application. Then an emergency over massage will be delivered.
+2.2.3	Emergency contacts are in single place
+There are some contacts like police, ambulance and fire brigade which will be needed ultimately in an emergency. In such a situation going through contacts (if those are in contacts) or finding them may become a hassle. This application handles that problem by bringing all above mentioned contacts in to the application. Users will be able to dial them with one single click.
+2.2.4	Finding locations and driving directions to places like hospital and police stations
+Users will have to find places like hospital and police stations in an emergency. It is critical to find the nearest place and shortest path. With this application users will be able to find those places with a single touch. Then those places and directions will be shown in a map.
+2.2.5	Getting information about recent natural disasters
+When there is a natural disaster is happening around users will want to know information about it like magnitude, safe places, etc. Users will be able to view a summary of information about natural disasters through this application.
+2.3	User characteristics
+Since this application is for generic smart phone user there will be users of different age groups and different abilities. 
+2.4	Constraints
+Application must be deployed within 14 weeks must be developed using the RUP framework.
+2.5	Assumptions and dependencies
+This will have dependencies with the web services which are going to be used.
+
+3.	Specific Requirements 
+3.1	Functionality
+3.1.1	Sending emergency informing massages
+User shall be able to send a massage and email together asking help to five preconfigured contacts. Contacts configuration must be done through application. This message must contain the exact location of the user using coordinates.
+3.1.2	Automatic emergency informing massages
+When an emergency massage is sent the application shall automatically send emergency informing massages for every 15 minutes until the user mark as emergency is over from the application. Then the application shall send an emergency over massage to the above contacts.
+3.1.3	Getting important contacts to a single place
+The application must contain buttons to quick dial emergency contacts which are police, ambulance and fire brigade.
+3.1.4	Finding locations and directions
+There must be functions to get locations to the nearest hospitals and police stations. Once the function is invoked application should show the places with the best possible route.
+3.1.5	Showing information about natural disasters
+When this function is invoked application should show a summary of recent natural disasters and there information.
+
+3.2	Usability 
+3.2.1	Must be compatible with all kinds of users
+Since this application is for generic users it must be compatible with all kinds of users with different abilities. So the UI must be clear and descriptive. And invoking functionalities must be simple.
+3.2.2	Quick access to functionalities
+This application will be mainly used on emergency situations. Therefore quick and direct access must be enabled to all functions
+3.2.3	Less or no training time
+Once a user read the user guide he will be able to use it. So UI must be developed in a descriptive way. 
+3.3	Reliability 
+3.3.1	Accuracy
+This application contains many information services like locating places getting information about natural disasters, etc. These things must be very accurate since user’s safety depends on accuracy of these factors.
+3.3.2	 Availability
+This application will use external web services. So the availability of the application will depend on the availability of those web services. So the web services which will be used must be highly available. There must be backup services assigned if possible.
+3.3.3	 Bugs or Defect Rate
+No of bugs must be zero or close to zero in the final version which will be released on Android Market.
+3.4	Performance
+3.4.1	Response time
+Time is critical in emergency situations. So application loading time and function invoking time must be very low. Also getting information from web services and processing them must be quick too.  So application must be designed in such a way that response time is very low.
+3.4.2	Less battery consumption
+Available battery power will be a critical in an emergency situation. So the application will be operated in such a way it will consume less battery power.
+3.5	Supportability
+3.5.1	Maintainability
+This application will be developed according to the RUP guidelines. So all formal and informal document s and artifacts related to the project will be generated throughout project period. 
+Standard programming guide lines and good object oriented programming practices shall followed in the implementation phase.
+3.5.2	Evolution
+New versions shall release to be compatible with new Android versions
+3.6	Design Constraints
+3.6.1	Software process requirements
+Project must be developed using Rational Unified Process in two iterations which are four and five weeks.
+3.6.2	Development tools
+Eclipse IDE must be used since it gives the best support for Android development by Android ADT plugin.
+Software testing shall be done using Android emulator and user testing should be done using real devices.
+3.7	User Documentation and Help System Requirements
+Users should be able to download a user manual in PDF format. Additional training videos will be available on the internet.
+3.8	Purchased Components
+No purchased component should be used and all reused components must be free and open source.
+3.9	Interfaces
+3.9.1	User Interfaces
+User interfaces will be touch systems which will have descriptive icons.
+3.9.2	Hardware Interfaces
+No hardware interfaces will be included to the application because Android handles hardware manipulations itself.
+3.9.3	Software Interfaces
+This will connect to web interfaces of external service providers like Google maps. So these interfaces have to be compatible with their interfaces and APIs. 
+3.9.4	Communications Interfaces
+All external communications will happen through the mobile network provider’s network. These communications will be done by Android framework.
+3.10	Licensing Requirements
+Software will be published ass an open source project with the GNU general public license. 
+3.11	Legal, Copyright, and Other Notices
+None
+3.12	Applicable Standards
+This project process should adhere to RUP standards.
+

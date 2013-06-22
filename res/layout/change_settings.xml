@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/change_settings"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+
+    <TabHost
+        android:id="@+id/TabHost1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/tab1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingTop="70px" >
+                >
+
+                <ScrollView
+                    android:id="@+id/ScrollView01"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:isScrollContainer="true"
+                    android:paddingTop="20px"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbars="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settingsTab1"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/changePolice"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/editPoliceNo"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.69"
+                                android:inputType="phone" >
+
+                                <requestFocus />
+                            </EditText>
+
+                            <Button
+                                android:id="@+id/buttonSetPolice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/OK"
+                                android:onClick="doSavePoliceNo" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/changeAmbulanceNo"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/editAmbulanceNo"
+                                android:layout_width="216dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.69"
+                                android:inputType="phone" >
+
+                                <requestFocus />
+                            </EditText>
+
+                            <Button
+                                android:id="@+id/buttonChangeAmbulanceNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="doSaveAmbulanceNo"
+                                android:text="@string/OK" />
+
+                        </LinearLayout>
+                        
+                        
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+                        
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/changeFireBrigadeNo"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+                        
+                         <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/editFireBrigadeNo"
+                                android:layout_width="216dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.69"
+                                android:inputType="phone" >
+
+                                <requestFocus />
+                            </EditText>
+
+                            <Button
+                                android:id="@+id/buttonChangeFireBrigadeNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="doSaveFireBrigadeNo"
+                                android:text="@string/OK" />
+
+                        </LinearLayout>
+                        </LinearLayout></ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingTop="75px" >
+
+                <ScrollView
+                    android:id="@+id/ScrollView01"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:isScrollContainer="true"
+                    android:paddingTop="20px"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbars="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/buddy_settings"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buddy 1"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/editTextBuddy1"
+                                android:layout_width="216dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.69"
+                                android:inputType="phone" >
+
+                                <requestFocus />
+                            </EditText>
+
+                            <Button
+                                android:id="@+id/button1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="doLaunchContactPicker1"
+                                android:text="@string/browse" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buddy 2"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/editTextBuddy2"
+                                android:layout_width="216dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.69"
+                                android:inputType="phone" >
+
+                                <requestFocus />
+                            </EditText>
+
+                            <Button
+                                android:id="@+id/button2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="doLaunchContactPicker2"
+                                android:text="@string/browse" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buddy 3"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/editTextBuddy3"
+                                android:layout_width="216dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.69"
+                                android:inputType="phone" >
+
+                                <requestFocus />
+                            </EditText>
+
+                            <Button
+                                android:id="@+id/button3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="doLaunchContactPicker3"
+                                android:text="@string/browse" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buddy 4"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/editTextBuddy4"
+                                android:layout_width="216dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.69"
+                                android:inputType="phone" >
+
+                                <requestFocus />
+                            </EditText>
+
+                            <Button
+                                android:id="@+id/button4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="doLaunchContactPicker4"
+                                android:text="@string/browse" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buddy 5"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/editTextBuddy5"
+                                android:layout_width="216dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.69"
+                                android:inputType="phone" >
+
+                                <requestFocus />
+                            </EditText>
+
+                            <Button
+                                android:id="@+id/button5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="doLaunchContactPicker5"
+                                android:text="@string/browse" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </FrameLayout>
+    </TabHost>
+
+</LinearLayout>
